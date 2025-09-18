@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Jharkhand Tourism</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #11d411;
+      --bg-light: #f0fdf4;
+      --text-light: #1f2937;
+      --bg-dark: #111827;
+      --text-dark: #f9fafb;
+    }
+    .dark {
+      --bg-color: var(--bg-dark);
+      --text-color: var(--text-dark);
+      --card-bg: #1f2937;
+      --footer-bg: #111827;
+      --nav-bg: rgba(17, 24, 39, 0.8);
+      --secondary-nav-bg: #1f2937;
+    }
+    html {
+      background-color: var(--bg-color, var(--bg-dark));
+      color: var(--text-color, var(--text-dark));
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--primary-color);
+      transition: width 0.3s;
+    }
+    .dark .nav-link:hover { color: var(--primary-color); }
+    .light .nav-link:hover { color: #166534; }
+    .nav-link:hover::after { width: 100%; }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: var(--card-bg, #1f2937); }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+    .light {
+      --bg-color: var(--bg-light);
+      --text-color: var(--text-light);
+      --card-bg: #ffffff;
+      --footer-bg: #10B981;
+      --nav-bg: rgba(240, 253, 244, 0.8);
+      --secondary-nav-bg: #ffffff;
+    }
+    .light .bg-gray-900 { background-color: var(--bg-light); }
+    .light .text-white { color: var(--text-light); }
+    .light .text-gray-300 { color: #4b5563; }
+    .light .text-gray-400 { color: #6b7280; }
+    .light .border-b-gray-700 { border-color: #d1d5db; }
+    .light .bg-gray-800 { background-color: #ffffff; }
+    .light .bg-gray-800\/50 { background-color: rgba(255, 255, 255, 0.5); }
+    .light .bg-gray-900\/80 { background-color: var(--nav-bg); }
+    .light .bg-gray-800\/90 {
+        background-color: var(--secondary-nav-bg);
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .light footer.bg-gray-900 { background-color: #10B981; }
+    .light footer .text-white { color: #ffffff; }
+    .light footer .text-gray-400 { color: #d1fae5; }
+    .light footer .hover\:text-white:hover { color: #ffffff; }
+    .light .hero-text-dark { color: white !important; }
+    .light .drop-shadow-lg { filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); }
+    .light .drop-shadow-md { filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06)); }
+    .dropdown:hover .dropdown-menu { display: block; }
+</style>
+</head>
+<body class="bg-gray-900 text-white" id="body">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+
+<!-- ✅ Navbar from destination.html -->
+<header class="w-full sticky top-0 z-50">
+  <!-- Top bar -->
+  <div class="bg-gray-900/80 backdrop-blur-lg transition-colors duration-300">
+    <div class="max-w-full mx-auto px-10">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-12">
+          <div class="flex items-center gap-3 text-green-400">
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 
+                12s4.48 10 10 10 10-4.48 
+                10-10S17.52 2 12 2zm-2 15l-4-4 
+                1.41-1.41L10 14.17l6.59-6.59L18 
+                9l-8 8z" fill-opacity="0.3"></path>
+              <path d="M14.24 12.81c.39-.73.3-1.68-.26-2.34l-1.6-1.89c-.43-.51-1.12-.7-1.78-.49l-2.61.82c-.4.12-.66.49-.66.91v3.29c0 .42.26.79.66.91l2.61.82c.66.21 1.35 0 1.78-.49l1.6-1.89c.56-.66.65-1.61.26-2.34zM10 
+                15.5v-3.41l1.71-.54 1.2 
+                1.42-1.2 1.42-1.71-.54z"></path>
+            </svg>
+            <h2 class="text-green-400 text-xl font-bold tracking-[-0.015em]">
+              Jharkhand
+            </h2>
+          </div>
+        </div>
+
+        <!-- Right side controls -->
+        <div class="flex items-center gap-4">
+          <!-- Language dropdown -->
+          <div class="relative dropdown">
+            <button
+              class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+              <span class="material-symbols-outlined text-green-400">language</span>
+              <span class="text-white text-sm font-medium">EN</span>
+              <span class="material-symbols-outlined text-green-400 text-sm">arrow_drop_down</span>
+            </button>
+            <div
+              class="dropdown-menu absolute hidden bg-gray-800 rounded-md shadow-lg mt-2 py-1 w-28 z-10 right-0">
+              <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                href="#">English</a>
+              <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                href="#">Hindi</a>
+            </div>
+          </div>
+
+          <!-- Dark/Light Mode Toggle -->
+          <button aria-label="Toggle dark mode"
+            class="relative inline-flex items-center h-8 rounded-full w-14 focus:outline-none"
+            id="theme-toggle">
+            <span class="absolute w-6 h-6 transform bg-white rounded-full transition-transform"
+              id="toggle-circle"></span>
+            <span class="material-symbols-outlined text-yellow-400 ml-1 z-10">light_mode</span>
+            <span class="material-symbols-outlined text-gray-800 mr-1 ml-auto z-10">dark_mode</span>
+          </button>
+
+          <!-- Profile button -->
+          <button
+            class="p-2 rounded-full bg-green-500 hover:bg-green-600 transition-colors duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+            <span class="material-symbols-outlined text-white"> person </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar links -->
+  <nav class="bg-gray-800/90 shadow-md backdrop-blur-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center h-14 overflow-x-auto">
+        <div class="flex items-center space-x-8 whitespace-nowrap">
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="home.html">Home</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="destination.html">Destinations</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="planyourtrip.html">Plan Your Trip</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="culture.html">Culture</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="bookings.html">Bookings</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="greentravel.html">Green Travel</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="heritagear.html">Heritage AR</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="aboutus.html">About Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="flex flex-1 justify-center py-10 px-4 sm:px-6 lg:px-8">
+<div class="layout-content-container flex flex-col max-w-6xl flex-1">
+<div class="text-center mb-10">
+<h1 class="text-white tracking-tight text-4xl md:text-5xl font-bold leading-tight">Book Your Jharkhand Adventure</h1>
+<p class="text-[#9db99d] text-lg font-normal leading-normal mt-4 max-w-3xl mx-auto">
+                Empowering local communities through tourism. Book local guides, homestays, and artisan workshops directly and support the heart of Jharkhand.
+              </p>
+</div>
+<div class="border-b border-[#3b543b] mb-6">
+<nav class="flex justify-center -mb-px gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] py-4 px-2 inactive-tab hover:text-white transition-colors" href="#">
+<p class="text-base font-bold tracking-[0.015em]">Local Guides</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] py-4 px-2 active-tab" href="#">
+<p class="text-base font-bold tracking-[0.015em]">Homestays</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] py-4 px-2 inactive-tab hover:text-white transition-colors" href="#">
+<p class="text-base font-bold tracking-[0.015em]">Artisan Workshops</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col md:flex-row gap-6 items-center px-4 mb-8">
+<div class="relative flex-grow w-full md:w-auto">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#9db99d]"> search </span>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-[var(--primary-color)] border-2 border-[#283928] bg-[#1a241a] h-12 placeholder:text-[#9db99d] px-12 text-base font-normal leading-normal" placeholder="Search for homestays by location" value=""/>
+</div>
+<div class="flex gap-3 flex-wrap justify-center">
+<button class="filter-chip flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#283928] px-4 text-white text-sm font-medium leading-normal hover:bg-[#3b543b]">
+                  Rural
+                </button>
+<button class="filter-chip flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#283928] px-4 text-white text-sm font-medium leading-normal hover:bg-[#3b543b] active">
+                  Nature Retreat
+                </button>
+<button class="filter-chip flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#283928] px-4 text-white text-sm font-medium leading-normal hover:bg-[#3b543b]">
+                  Family Friendly
+                </button>
+<button class="filter-chip flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#283928] px-4 text-white text-sm font-medium leading-normal hover:bg-[#3b543b]">
+                  Budget
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+<div class="homestay-card flex flex-col gap-4 rounded-xl bg-[#1a241a] border border-[#283928] overflow-hidden">
+<div class="relative w-full aspect-[4/3]">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-t-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXYaP62OllngcSQpZN2Bp6DoHskHMgBY_ace1CTJAW2LIcZ_sb3_UFjwkckNro2S3yTGBr8smtgi0Ln3vcAOYJXO5HSPbyWbbJkug4y3tl_JYYr8ddiipIu_huftvcYCLy5WIvQffrDpr25CKFKEfz7-rtIVwMtyckeR2UyQbGC4F8-w4NvLtJRPAW06ems4i70Nj1JfNfmClQjMQsyQIkp80CUplllZ9JlrN183aRWfD8sHaBTCX9GLSOvdVB4bSdOnv5AQPfKZs");'></div>
+<div class="absolute top-4 right-4 flex items-center gap-1 bg-[#111811]/70 backdrop-blur-sm rounded-full px-3 py-1">
+<span class="material-symbols-outlined text-yellow-400 text-base">star</span>
+<span class="text-white text-sm font-medium">4.8 (32)</span>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<h3 class="text-white text-xl font-bold leading-tight">Serene Jungle Stay, Betla</h3>
+<p class="text-[#9db99d] text-sm font-normal leading-normal">A peaceful retreat nestled in the lush greenery near Betla National Park. Perfect for nature lovers.</p>
+<div class="flex items-center justify-between mt-2">
+<p class="text-white text-lg font-bold">₹2,500 <span class="text-sm font-normal text-[#9db99d]">/ night</span></p>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-transparent border border-[var(--primary-color)] text-[var(--primary-color)] text-sm font-bold hover:bg-[var(--primary-color)] hover:text-[#111811] transition-colors">
+                      Quick View
+                    </button>
+</div>
+</div>
+</div>
+<div class="homestay-card flex flex-col gap-4 rounded-xl bg-[#1a241a] border border-[#283928] overflow-hidden">
+<div class="relative w-full aspect-[4/3]">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-t-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXYaP62OllngcSQpZN2Bp6DoHskHMgBY_ace1CTJAW2LIcZ_sb3_UFjwkckNro2S3yTGBr8smtgi0Ln3vcAOYJXO5HSPbyWbbJkug4y3tl_JYYr8ddiipIu_huftvcYCLy5WIvQffrDpr25CKFKEfz7-rtIVwMtyckeR2UyQbGC4F8-w4NvLtJRPAW06ems4i70Nj1JfNfmClQjMQsyQIkp80CUplllZ9JlrN183aRWfD8sHaBTCX9GLSOvdVB4bSdOnv5AQPfKZs");'></div>
+<div class="absolute top-4 right-4 flex items-center gap-1 bg-[#111811]/70 backdrop-blur-sm rounded-full px-3 py-1">
+<span class="material-symbols-outlined text-yellow-400 text-base">star</span>
+<span class="text-white text-sm font-medium">4.5 (45)</span>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<h3 class="text-white text-xl font-bold leading-tight">Tribal Village Homestay, Netarhat</h3>
+<p class="text-[#9db99d] text-sm font-normal leading-normal">Experience authentic tribal life and hospitality in this rustic homestay. Learn about local culture.</p>
+<div class="flex items-center justify-between mt-2">
+<p class="text-white text-lg font-bold">₹1,800 <span class="text-sm font-normal text-[#9db99d]">/ night</span></p>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-transparent border border-[var(--primary-color)] text-[var(--primary-color)] text-sm font-bold hover:bg-[var(--primary-color)] hover:text-[#111811] transition-colors">
+                      Quick View
+                    </button>
+</div>
+</div>
+</div>
+<div class="homestay-card flex flex-col gap-4 rounded-xl bg-[#1a241a] border border-[#283928] overflow-hidden">
+<div class="relative w-full aspect-[4/3]">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-t-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXYaP62OllngcSQpZN2Bp6DoHskHMgBY_ace1CTJAW2LIcZ_sb3_UFjwkckNro2S3yTGBr8smtgi0Ln3vcAOYJXO5HSPbyWbbJkug4y3tl_JYYr8ddiipIu_huftvcYCLy5WIvQffrDpr25CKFKEfz7-rtIVwMtyckeR2UyQbGC4F8-w4NvLtJRPAW06ems4i70Nj1JfNfmClQjMQsyQIkp80CUplllZ9JlrN183aRWfD8sHaBTCX9GLSOvdVB4bSdOnv5AQPfKZs");'></div>
+<div class="absolute top-4 right-4 flex items-center gap-1 bg-[#111811]/70 backdrop-blur-sm rounded-full px-3 py-1">
+<span class="material-symbols-outlined text-yellow-400 text-base">star</span>
+<span class="text-white text-sm font-medium">4.9 (60)</span>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<h3 class="text-white text-xl font-bold leading-tight">Riverside Cottage, Ghatshila</h3>
+<p class="text-[#9db99d] text-sm font-normal leading-normal">A charming cottage by the Subarnarekha river, offering tranquility and scenic views.</p>
+<div class="flex items-center justify-between mt-2">
+<p class="text-white text-lg font-bold">₹3,200 <span class="text-sm font-normal text-[#9db99d]">/ night</span></p>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-transparent border border-[var(--primary-color)] text-[var(--primary-color)] text-sm font-bold hover:bg-[var(--primary-color)] hover:text-[#111811] transition-colors">
+                      Quick View
+                    </button>
+</div>
+</div>
+</div>
+<div class="homestay-card flex flex-col gap-4 rounded-xl bg-[#1a241a] border border-[#283928] overflow-hidden">
+<div class="relative w-full aspect-[4/3]">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-t-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXYaP62OllngcSQpZN2Bp6DoHskHMgBY_ace1CTJAW2LIcZ_sb3_UFjwkckNro2S3yTGBr8smtgi0Ln3vcAOYJXO5HSPbyWbbJkug4y3tl_JYYr8ddiipIu_huftvcYCLy5WIvQffrDpr25CKFKEfz7-rtIVwMtyckeR2UyQbGC4F8-w4NvLtJRPAW06ems4i70Nj1JfNfmClQjMQsyQIkp80CUplllZ9JlrN183aRWfD8sHaBTCX9GLSOvdVB4bSdOnv5AQPfKZs");'></div>
+<div class="absolute top-4 right-4 flex items-center gap-1 bg-[#111811]/70 backdrop-blur-sm rounded-full px-3 py-1">
+<span class="material-symbols-outlined text-yellow-400 text-base">star</span>
+<span class="text-white text-sm font-medium">4.7 (25)</span>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<h3 class="text-white text-xl font-bold leading-tight">Family Farmhouse, Ranchi</h3>
+<p class="text-[#9db99d] text-sm font-normal leading-normal">Spacious farmhouse with modern amenities, ideal for family getaways and a peaceful retreat.</p>
+<div class="flex items-center justify-between mt-2">
+<p class="text-white text-lg font-bold">₹4,000 <span class="text-sm font-normal text-[#9db99d]">/ night</span></p>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-transparent border border-[var(--primary-color)] text-[var(--primary-color)] text-sm font-bold hover:bg-[var(--primary-color)] hover:text-[#111811] transition-colors">
+                      Quick View
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

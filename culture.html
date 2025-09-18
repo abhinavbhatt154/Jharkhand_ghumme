@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Jharkhand Tourism</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #11d411;
+      --bg-light: #f0fdf4;
+      --text-light: #1f2937;
+      --bg-dark: #111827;
+      --text-dark: #f9fafb;
+    }
+    .dark {
+      --bg-color: var(--bg-dark);
+      --text-color: var(--text-dark);
+      --card-bg: #1f2937;
+      --footer-bg: #111827;
+      --nav-bg: rgba(17, 24, 39, 0.8);
+      --secondary-nav-bg: #1f2937;
+    }
+    html {
+      background-color: var(--bg-color, var(--bg-dark));
+      color: var(--text-color, var(--text-dark));
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--primary-color);
+      transition: width 0.3s;
+    }
+    .dark .nav-link:hover { color: var(--primary-color); }
+    .light .nav-link:hover { color: #166534; }
+    .nav-link:hover::after { width: 100%; }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: var(--card-bg, #1f2937); }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+    .light {
+      --bg-color: var(--bg-light);
+      --text-color: var(--text-light);
+      --card-bg: #ffffff;
+      --footer-bg: #10B981;
+      --nav-bg: rgba(240, 253, 244, 0.8);
+      --secondary-nav-bg: #ffffff;
+    }
+    .light .bg-gray-900 { background-color: var(--bg-light); }
+    .light .text-white { color: var(--text-light); }
+    .light .text-gray-300 { color: #4b5563; }
+    .light .text-gray-400 { color: #6b7280; }
+    .light .border-b-gray-700 { border-color: #d1d5db; }
+    .light .bg-gray-800 { background-color: #ffffff; }
+    .light .bg-gray-800\/50 { background-color: rgba(255, 255, 255, 0.5); }
+    .light .bg-gray-900\/80 { background-color: var(--nav-bg); }
+    .light .bg-gray-800\/90 {
+        background-color: var(--secondary-nav-bg);
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .light footer.bg-gray-900 { background-color: #10B981; }
+    .light footer .text-white { color: #ffffff; }
+    .light footer .text-gray-400 { color: #d1fae5; }
+    .light footer .hover\:text-white:hover { color: #ffffff; }
+    .light .hero-text-dark { color: white !important; }
+    .light .drop-shadow-lg { filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); }
+    .light .drop-shadow-md { filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06)); }
+    .dropdown:hover .dropdown-menu { display: block; }
+</style>
+</head>
+<body class="bg-gray-900 text-white" id="body">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+
+<!-- ✅ Navbar from destination.html -->
+<header class="w-full sticky top-0 z-50">
+  <!-- Top bar -->
+  <div class="bg-gray-900/80 backdrop-blur-lg transition-colors duration-300">
+    <div class="max-w-full mx-auto px-10">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-12">
+          <div class="flex items-center gap-3 text-green-400">
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 
+                12s4.48 10 10 10 10-4.48 
+                10-10S17.52 2 12 2zm-2 15l-4-4 
+                1.41-1.41L10 14.17l6.59-6.59L18 
+                9l-8 8z" fill-opacity="0.3"></path>
+              <path d="M14.24 12.81c.39-.73.3-1.68-.26-2.34l-1.6-1.89c-.43-.51-1.12-.7-1.78-.49l-2.61.82c-.4.12-.66.49-.66.91v3.29c0 .42.26.79.66.91l2.61.82c.66.21 1.35 0 1.78-.49l1.6-1.89c.56-.66.65-1.61.26-2.34zM10 
+                15.5v-3.41l1.71-.54 1.2 
+                1.42-1.2 1.42-1.71-.54z"></path>
+            </svg>
+            <h2 class="text-green-400 text-xl font-bold tracking-[-0.015em]">
+              Jharkhand
+            </h2>
+          </div>
+        </div>
+
+        <!-- Right side controls -->
+        <div class="flex items-center gap-4">
+          <!-- Language dropdown -->
+          <div class="relative dropdown">
+            <button
+              class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+              <span class="material-symbols-outlined text-green-400">language</span>
+              <span class="text-white text-sm font-medium">EN</span>
+              <span class="material-symbols-outlined text-green-400 text-sm">arrow_drop_down</span>
+            </button>
+            <div
+              class="dropdown-menu absolute hidden bg-gray-800 rounded-md shadow-lg mt-2 py-1 w-28 z-10 right-0">
+              <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                href="#">English</a>
+              <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                href="#">Hindi</a>
+            </div>
+          </div>
+
+          <!-- Dark/Light Mode Toggle -->
+          <button aria-label="Toggle dark mode"
+            class="relative inline-flex items-center h-8 rounded-full w-14 focus:outline-none"
+            id="theme-toggle">
+            <span class="absolute w-6 h-6 transform bg-white rounded-full transition-transform"
+              id="toggle-circle"></span>
+            <span class="material-symbols-outlined text-yellow-400 ml-1 z-10">light_mode</span>
+            <span class="material-symbols-outlined text-gray-800 mr-1 ml-auto z-10">dark_mode</span>
+          </button>
+
+          <!-- Profile button -->
+          <button
+            class="p-2 rounded-full bg-green-500 hover:bg-green-600 transition-colors duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+            <span class="material-symbols-outlined text-white"> person </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar links -->
+  <nav class="bg-gray-800/90 shadow-md backdrop-blur-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center h-14 overflow-x-auto">
+        <div class="flex items-center space-x-8 whitespace-nowrap">
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="home.html">Home</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="destination.html">Destinations</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="planyourtrip.html">Plan Your Trip</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="culture.html">Culture</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="bookings.html">Bookings</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="greentravel.html">Green Travel</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="heritagear.html">Heritage AR</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="aboutus.html">About Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="px-20 lg:px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-wrap justify-between gap-4 p-4 items-center">
+<h1 class="text-white tracking-light text-4xl font-bold leading-tight">Culture &amp; Experience</h1>
+</div>
+<section class="py-8">
+<h2 class="text-white text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6">Blockchain-Verified Handicrafts &amp; Tickets</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+<div class="group flex flex-col gap-3 pb-3 transform transition-transform duration-300 hover:-translate-y-2">
+<div class="relative overflow-hidden rounded-xl">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwan4YZJUMbOS2_ECT4dyybi0XxJ0h3P2h-_qBJr-ARCVF9VWdTeHeN2rZQGqRhbX-hL2kOOSA4Xm9dFG0XV6AVDm_zbxlity0eKL4bWYxj4G3_53xyknwHH93kJ-e4Wyz2fatzYNICe8gJ7tmFX_e4cAvIotEjxtqGPMhAVfSkJOARI-b9sxc-_tH-4-HEHXrxCq9Kh6IOTh9DKS09NB5_YnX57sWEMckPYJSFtSpx5JFbTdrauPsqqyHVzerSnMUwfQYDT-3fVo");'></div>
+<div class="absolute top-2 right-2 bg-[var(--primary-color)] text-[#111811] rounded-full p-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-base"> qr_code_2 </span>
+</div>
+</div>
+<div>
+<p class="text-white text-lg font-semibold leading-normal">Dhokra Art</p>
+<p class="text-[#9db99d] text-sm font-normal leading-normal">Authentic Dhokra Art from Jharkhand, verified by blockchain.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-3 pb-3 transform transition-transform duration-300 hover:-translate-y-2">
+<div class="relative overflow-hidden rounded-xl">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDn6i36eEANB-5fQBntQSjaimnwMhkCfpfI0gowlmnLJcptz5_M-OkxAbsUOUmEBHVumkaQ4uPYadMxC97zmjkT7QUulac1d78s8YcfkcdvlXyJXzMrDOxRMS8jKUYvDQrkUyUCJOh9JDzmZNRi8tJ79t2Mk7oxs82Bo28kBqg-CUSz7RhdO_1QgaJGSxKbj9lycC2YQwoP9Lrab87cNvmdUtqqNKwqyoqmdst9vUQlxKkwyfgHz905nSx2S4yggsaiMk5LRrDXT4I");'></div>
+<div class="absolute top-2 right-2 bg-[var(--primary-color)] text-[#111811] rounded-full p-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-base"> qr_code_2 </span>
+</div>
+</div>
+<div>
+<p class="text-white text-lg font-semibold leading-normal">Paitkar Paintings</p>
+<p class="text-[#9db99d] text-sm font-normal leading-normal">Traditional Paitkar Paintings, each piece with a unique blockchain ID.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-3 pb-3 transform transition-transform duration-300 hover:-translate-y-2">
+<div class="relative overflow-hidden rounded-xl">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAeNdhHfyE9L8qB_xFTer3IaX0uXSL2viVUkR30BjE1ZtSp5QA1ovUtM5RN_1_75jSOpkK1_QrnD-DlOVmiov9-yvGSbEsd_jDLHKSthXDT6GLwZQGHvMuFDU8qlesAmCX_JXaHLT1R0lF7izOMkZPzkCFHQ06pnjHSBvYG0dbTmsKNdH2s0l-wx0kPD1jYJltilqFtKFyWNqWDHFng2kfl2aQwLewDnCeYWO03rNQWswFczyp3RhfafqdmriL6u8dy43xRJXXViOY");'></div>
+<div class="absolute top-2 right-2 bg-[var(--primary-color)] text-[#111811] rounded-full p-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-base"> qr_code_2 </span>
+</div>
+</div>
+<div>
+<p class="text-white text-lg font-semibold leading-normal">Chhau Masks</p>
+<p class="text-[#9db99d] text-sm font-normal leading-normal">Handcrafted Chhau Masks, authenticity guaranteed through blockchain.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-3 pb-3 transform transition-transform duration-300 hover:-translate-y-2">
+<div class="relative overflow-hidden rounded-xl">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJ2EZgv2-_Mkco3eBgZ13-6ioZaXpdLoaEnZHoh4sfQN8caURzdoE_J9_GSg6v5szMCa3CWXgVYSdzDRiqu4QMbEh_ymNF-j5Hnv8GpHpGKmrnquVsIMlL7N6xfeVBlZgOca84fcmuaMikfViOA7Ei38Ko_ppCoy-uFSR4Kt8U5uqxgEDkutA7nUZUuv4ML5kO9DtLdaoNuejkqiEDXt2h87sV3_DHHvpLNjRBqgNNnam3SttS5eoNnXbUlFj-UOZ-hw0RuSCYZVY");'></div>
+<div class="absolute top-2 right-2 bg-[var(--primary-color)] text-[#111811] rounded-full p-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-base"> qr_code_2 </span>
+</div>
+</div>
+<div>
+<p class="text-white text-lg font-semibold leading-normal">Tribal Jewelry</p>
+<p class="text-[#9db99d] text-sm font-normal leading-normal">Exquisite Tribal Jewelry, verified for origin and craftsmanship.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-8">
+<h2 class="text-white text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6">Event Calendar</h2>
+<div class="flex flex-col lg:flex-row items-start justify-center gap-8 p-4">
+<div class="bg-[#1c271c] p-6 rounded-lg w-full lg:w-auto">
+<div class="flex items-center justify-between mb-4">
+<button class="text-white hover:text-[var(--primary-color)] transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<h3 class="text-white text-xl font-bold text-center">July 2024</h3>
+<button class="text-white hover:text-[var(--primary-color)] transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center">
+<div class="text-[#9db99d] text-sm font-bold">S</div>
+<div class="text-[#9db99d] text-sm font-bold">M</div>
+<div class="text-[#9db99d] text-sm font-bold">T</div>
+<div class="text-[#9db99d] text-sm font-bold">W</div>
+<div class="text-[#9db99d] text-sm font-bold">T</div>
+<div class="text-[#9db99d] text-sm font-bold">F</div>
+<div class="text-[#9db99d] text-sm font-bold">S</div>
+<div class="col-start-2 text-white/50 text-sm py-2">1</div>
+<div class="text-white text-sm py-2">2</div>
+<div class="text-white text-sm py-2">3</div>
+<div class="text-white text-sm py-2">4</div>
+<div class="text-white text-sm py-2">5</div>
+<div class="text-white text-sm py-2">6</div>
+<div class="text-white text-sm py-2">7</div>
+<div class="text-white text-sm py-2">8</div>
+<div class="text-white text-sm py-2">9</div>
+<div class="text-white text-sm py-2">10</div>
+<div class="text-white text-sm py-2">11</div>
+<div class="text-white text-sm py-2">12</div>
+<div class="text-white text-sm py-2">13</div>
+<div class="text-white text-sm py-2">14</div>
+<button class="text-white text-sm py-2 bg-[var(--primary-color)] rounded-full text-black font-bold">15</button>
+<div class="text-white text-sm py-2">16</div>
+<div class="text-white text-sm py-2">17</div>
+<div class="text-white text-sm py-2">18</div>
+<div class="text-white text-sm py-2">19</div>
+<div class="text-white text-sm py-2">20</div>
+<div class="text-white text-sm py-2">21</div>
+<div class="text-white text-sm py-2">22</div>
+<div class="text-white text-sm py-2">23</div>
+<div class="text-white text-sm py-2">24</div>
+<div class="text-white text-sm py-2">25</div>
+<div class="text-white text-sm py-2">26</div>
+<div class="text-white text-sm py-2">27</div>
+<div class="text-white text-sm py-2">28</div>
+<div class="text-white text-sm py-2">29</div>
+<div class="text-white text-sm py-2">30</div>
+<div class="text-white text-sm py-2">31</div>
+</div>
+</div>
+<div class="flex-1 w-full @container">
+<div class="overflow-x-auto rounded-lg border border-[#3b543b] bg-[#1c271c]">
+<table class="w-full text-left">
+<thead class="bg-[#1c271c]">
+<tr class="border-b border-[#3b543b]">
+<th class="px-4 py-3 text-white text-sm font-semibold">Event</th>
+<th class="px-4 py-3 text-white text-sm font-semibold hidden @[480px]:table-cell">Date</th>
+<th class="px-4 py-3 text-white text-sm font-semibold hidden @[640px]:table-cell">Location</th>
+<th class="px-4 py-3 text-white text-sm font-semibold">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-t-[#3b543b] hover:bg-[#283928] transition-colors">
+<td class="px-4 py-3 text-white text-sm">Sohrai Art Workshop</td>
+<td class="px-4 py-3 text-[#9db99d] text-sm hidden @[480px]:table-cell">July 15, 2024</td>
+<td class="px-4 py-3 text-[#9db99d] text-sm hidden @[640px]:table-cell">Hazaribagh</td>
+<td class="px-4 py-3"><a class="text-[var(--primary-color)] text-sm font-bold hover:underline" href="#">View</a></td>
+</tr>
+<tr class="border-b border-t-[#3b543b] hover:bg-[#283928] transition-colors">
+<td class="px-4 py-3 text-white text-sm">Chhau Dance Festival</td>
+<td class="px-4 py-3 text-[#9db99d] text-sm hidden @[480px]:table-cell">August 5, 2024</td>
+<td class="px-4 py-3 text-[#9db99d] text-sm hidden @[640px]:table-cell">Saraikela</td>
+<td class="px-4 py-3"><a class="text-[var(--primary-color)] text-sm font-bold hover:underline" href="#">View</a></td>
+</tr>
+<tr class="hover:bg-[#283928] transition-colors">
+<td class="px-4 py-3 text-white text-sm">Tribal Food Fair</td>
+<td class="px-4 py-3 text-[#9db99d] text-sm hidden @[480px]:table-cell">August 20, 2024</td>
+<td class="px-4 py-3 text-[#9db99d] text-sm hidden @[640px]:table-cell">Ranchi</td>
+<td class="px-4 py-3"><a class="text-[var(--primary-color)] text-sm font-bold hover:underline" href="#">View</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Jharkhand Tourism</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #11d411;
+      --bg-light: #f0fdf4;
+      --text-light: #1f2937;
+      --bg-dark: #111827;
+      --text-dark: #f9fafb;
+    }
+    .dark {
+      --bg-color: var(--bg-dark);
+      --text-color: var(--text-dark);
+      --card-bg: #1f2937;
+      --footer-bg: #111827;
+      --nav-bg: rgba(17, 24, 39, 0.8);
+      --secondary-nav-bg: #1f2937;
+    }
+    html {
+      background-color: var(--bg-color, var(--bg-dark));
+      color: var(--text-color, var(--text-dark));
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--primary-color);
+      transition: width 0.3s;
+    }
+    .dark .nav-link:hover { color: var(--primary-color); }
+    .light .nav-link:hover { color: #166534; }
+    .nav-link:hover::after { width: 100%; }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: var(--card-bg, #1f2937); }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+    .light {
+      --bg-color: var(--bg-light);
+      --text-color: var(--text-light);
+      --card-bg: #ffffff;
+      --footer-bg: #10B981;
+      --nav-bg: rgba(240, 253, 244, 0.8);
+      --secondary-nav-bg: #ffffff;
+    }
+    .light .bg-gray-900 { background-color: var(--bg-light); }
+    .light .text-white { color: var(--text-light); }
+    .light .text-gray-300 { color: #4b5563; }
+    .light .text-gray-400 { color: #6b7280; }
+    .light .border-b-gray-700 { border-color: #d1d5db; }
+    .light .bg-gray-800 { background-color: #ffffff; }
+    .light .bg-gray-800\/50 { background-color: rgba(255, 255, 255, 0.5); }
+    .light .bg-gray-900\/80 { background-color: var(--nav-bg); }
+    .light .bg-gray-800\/90 {
+        background-color: var(--secondary-nav-bg);
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .light footer.bg-gray-900 { background-color: #10B981; }
+    .light footer .text-white { color: #ffffff; }
+    .light footer .text-gray-400 { color: #d1fae5; }
+    .light footer .hover\:text-white:hover { color: #ffffff; }
+    .light .hero-text-dark { color: white !important; }
+    .light .drop-shadow-lg { filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); }
+    .light .drop-shadow-md { filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06)); }
+    .dropdown:hover .dropdown-menu { display: block; }
+</style>
+</head>
+<body class="bg-gray-900 text-white" id="body">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+
+<!-- ✅ Navbar from destination.html -->
+<header class="w-full sticky top-0 z-50">
+  <!-- Top bar -->
+  <div class="bg-gray-900/80 backdrop-blur-lg transition-colors duration-300">
+    <div class="max-w-full mx-auto px-10">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-12">
+          <div class="flex items-center gap-3 text-green-400">
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 
+                12s4.48 10 10 10 10-4.48 
+                10-10S17.52 2 12 2zm-2 15l-4-4 
+                1.41-1.41L10 14.17l6.59-6.59L18 
+                9l-8 8z" fill-opacity="0.3"></path>
+              <path d="M14.24 12.81c.39-.73.3-1.68-.26-2.34l-1.6-1.89c-.43-.51-1.12-.7-1.78-.49l-2.61.82c-.4.12-.66.49-.66.91v3.29c0 .42.26.79.66.91l2.61.82c.66.21 1.35 0 1.78-.49l1.6-1.89c.56-.66.65-1.61.26-2.34zM10 
+                15.5v-3.41l1.71-.54 1.2 
+                1.42-1.2 1.42-1.71-.54z"></path>
+            </svg>
+            <h2 class="text-green-400 text-xl font-bold tracking-[-0.015em]">
+              Jharkhand
+            </h2>
+          </div>
+        </div>
+
+        <!-- Right side controls -->
+        <div class="flex items-center gap-4">
+          <!-- Language dropdown -->
+          <div class="relative dropdown">
+            <button
+              class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+              <span class="material-symbols-outlined text-green-400">language</span>
+              <span class="text-white text-sm font-medium">EN</span>
+              <span class="material-symbols-outlined text-green-400 text-sm">arrow_drop_down</span>
+            </button>
+            <div
+              class="dropdown-menu absolute hidden bg-gray-800 rounded-md shadow-lg mt-2 py-1 w-28 z-10 right-0">
+              <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                href="#">English</a>
+              <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                href="#">Hindi</a>
+            </div>
+          </div>
+
+          <!-- Dark/Light Mode Toggle -->
+          <button aria-label="Toggle dark mode"
+            class="relative inline-flex items-center h-8 rounded-full w-14 focus:outline-none"
+            id="theme-toggle">
+            <span class="absolute w-6 h-6 transform bg-white rounded-full transition-transform"
+              id="toggle-circle"></span>
+            <span class="material-symbols-outlined text-yellow-400 ml-1 z-10">light_mode</span>
+            <span class="material-symbols-outlined text-gray-800 mr-1 ml-auto z-10">dark_mode</span>
+          </button>
+
+          <!-- Profile button -->
+          <button
+            class="p-2 rounded-full bg-green-500 hover:bg-green-600 transition-colors duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+            <span class="material-symbols-outlined text-white"> person </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar links -->
+  <nav class="bg-gray-800/90 shadow-md backdrop-blur-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center h-14 overflow-x-auto">
+        <div class="flex items-center space-x-8 whitespace-nowrap">
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="home.html">Home</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="destination.html">Destinations</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="planyourtrip.html">Plan Your Trip</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="culture.html">Culture</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="bookings.html">Bookings</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="greentravel.html">Green Travel</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="heritagear.html">Heritage AR</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="aboutus.html">About Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="flex flex-1 justify-center px-40 py-16">
+<div class="flex w-full max-w-7xl flex-col items-center">
+<div class="w-full max-w-3xl text-center">
+<h1 class="text-5xl font-bold tracking-tighter text-white">Plan Your Perfect Eco-Trip</h1>
+<p class="mx-auto mt-4 max-w-2xl text-lg text-[#9db99d]">
+                Discover Jharkhand's hidden gems with our AI-powered itinerary planner. Tailor your journey to your interests and budget, and receive personalized eco-friendly travel
+                tips for a sustainable adventure.
+              </p>
+</div>
+<div class="mt-12 w-full max-w-3xl rounded-2xl border border-[#283928] bg-[#1a241a] p-8">
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-white" for="interest">Your Interest</label>
+<select class="form-select w-full resize-none overflow-hidden rounded-lg border-none bg-[#283928] p-4 text-base text-white placeholder:text-[#9db99d] focus:outline-none focus:ring-2 focus:ring-[#11d411] focus:ring-offset-2 focus:ring-offset-[#1a241a]" id="interest">
+<option>Select your interest</option>
+<option>Culture &amp; Heritage</option>
+<option>Nature &amp; Wildlife</option>
+<option>Adventure &amp; Ecotourism</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-white" for="budget">Your Budget</label>
+<select class="form-select w-full resize-none overflow-hidden rounded-lg border-none bg-[#283928] p-4 text-base text-white placeholder:text-[#9db99d] focus:outline-none focus:ring-2 focus:ring-[#11d411] focus:ring-offset-2 focus:ring-offset-[#1a241a]" id="budget">
+<option>Select your budget</option>
+<option>Budget-Friendly</option>
+<option>Mid-Range</option>
+<option>Luxury</option>
+</select>
+</div>
+</div>
+<div class="mt-6 flex justify-center">
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#11d411] px-6 text-base font-bold text-[#111811] transition-transform hover:scale-105">
+<span class="material-symbols-outlined"> auto_awesome </span>
+<span class="truncate">Generate Itinerary</span>
+</button>
+</div>
+</div>
+<div class="mt-20 w-full max-w-7xl">
+<div class="text-center">
+<h2 class="text-4xl font-bold tracking-tighter text-white">Inspirational Itineraries</h2>
+<p class="mx-auto mt-4 max-w-3xl text-lg text-[#9db99d]">
+                  Explore our curated itineraries, designed to showcase the best of Jharkhand's culture, heritage, and natural beauty. These itineraries are available offline and
+                  support multi-language text conversion for a seamless travel experience.
+                </p>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col overflow-hidden rounded-2xl border border-[#283928] bg-[#1a241a] transition-transform hover:-translate-y-1">
+<img alt="Cultural Heritage Trail" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCljk4nOyfylJsg3y4dFJCbfY970hMZHKR5fpdCoXX64oHzxS8QFuGCzLU9ZIQxBJLlZ7n7cG7XH5VhWXQkTnF_vfy5Q981s1d9RIpDlqT9tDmFzfeMxAHQs0lDTnrrXZEzyj2BA43R0i58QJRntuquZaoAHZK-3acSCe1gaURWDpft21qhjR0gxCuGAHGckOGxjn7NpcJQ0O8EglVJHuHWPUT-NQfajPZwi_p0iL7GVLVRXIwC-BsiPtguvhsmru_nMb66QHeyT1k"/>
+<div class="flex flex-1 flex-col p-6">
+<p class="text-sm text-[#9db99d]">3 Days</p>
+<h3 class="mt-2 text-xl font-bold text-white">Cultural Heritage Trail</h3>
+<p class="mt-2 flex-1 text-[#9db99d]">Explore ancient temples, tribal villages, and historical sites that showcase Jharkhand's rich cultural tapestry.</p>
+<button class="mt-6 flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-[#283928] text-sm font-medium text-white transition-colors hover:bg-[#344834]">
+<span class="truncate">View Itinerary</span>
+<span class="material-symbols-outlined"> arrow_forward </span>
+</button>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-2xl border border-[#283928] bg-[#1a241a] transition-transform hover:-translate-y-1">
+<img alt="Nature &amp; Wildlife Expedition" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh4VXibzPkQSBsoh01TzOMrV5CC40U9S2UTpeUIhg_63AUHErv3aAilN0XJpAQi3n87hcmJ-6YD_A03MGkriOwFpygfdMMNxs9pAgKP4nX4OSL0-dyP_Vxf6g5_jjDIfxo7iDkdpC4BmOg90g6YpSLwrczXsiPv-Wq9V1TH0JaQhD0S928i7QUsBYI9n_aOtTUIK9_l9WBs5Hq_hv2ejInH4GqfLcrXp-J9lKuak7guVDTkUVj4n8r0nP6sf4W2EPsk8RDbkXj6oQ"/>
+<div class="flex flex-1 flex-col p-6">
+<p class="text-sm text-[#9db99d]">5 Days</p>
+<h3 class="mt-2 text-xl font-bold text-white">Nature &amp; Wildlife Expedition</h3>
+<p class="mt-2 flex-1 text-[#9db99d]">Immerse yourself in Jharkhand's lush forests, national parks, and wildlife sanctuaries, home to diverse flora and fauna.</p>
+<button class="mt-6 flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-[#283928] text-sm font-medium text-white transition-colors hover:bg-[#344834]">
+<span class="truncate">View Itinerary</span>
+<span class="material-symbols-outlined"> arrow_forward </span>
+</button>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-2xl border border-[#283928] bg-[#1a241a] transition-transform hover:-translate-y-1">
+<img alt="Adventure &amp; Eco-Tourism" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTNxhylvBRSLWxE4TNG5RNh7oxXQE9gwc8p8rnMTNK7-1kmevqk7SNE27AZm2SqJgbOql4XlAS1mWefGLCicd8MpcSeVtbC7Hzooty0SpWN5kraGZRco96soDrV90MjvwivGVqjlCKoqC-7ianq-LKs2FyI2kAf0vd2rb9pqPEFClj0lcgrbqvBARk1b52IJ2_GYqt17TqYez3F27lD9pe_O1vUi593FMNCLm0yIVUHeX6MH8N2yjm4cQSNYoxLG2Wajynb0tLX8k"/>
+<div class="flex flex-1 flex-col p-6">
+<p class="text-sm text-[#9db99d]">4 Days</p>
+<h3 class="mt-2 text-xl font-bold text-white">Adventure &amp; Eco-Tourism</h3>
+<p class="mt-2 flex-1 text-[#9db99d]">Experience thrilling activities like trekking, rock climbing, and water sports, while promoting sustainable tourism practices.</p>
+<button class="mt-6 flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-[#283928] text-sm font-medium text-white transition-colors hover:bg-[#344834]">
+<span class="truncate">View Itinerary</span>
+<span class="material-symbols-outlined"> arrow_forward </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

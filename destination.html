@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Jharkhand Tourism</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #11d411;
+      --bg-light: #f0fdf4;
+      --text-light: #1f2937;
+      --bg-dark: #111827;
+      --text-dark: #f9fafb;
+    }
+    .dark {
+      --bg-color: var(--bg-dark);
+      --text-color: var(--text-dark);
+      --card-bg: #1f2937;
+      --footer-bg: #111827;
+      --nav-bg: rgba(17, 24, 39, 0.8);
+      --secondary-nav-bg: #1f2937;
+    }
+    html {
+      background-color: var(--bg-color, var(--bg-dark));
+      color: var(--text-color, var(--text-dark));
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--primary-color);
+      transition: width 0.3s;
+    }
+    .dark .nav-link:hover { color: var(--primary-color); }
+    .light .nav-link:hover { color: #166534; }
+    .nav-link:hover::after { width: 100%; }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: var(--card-bg, #1f2937); }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+    .light {
+      --bg-color: var(--bg-light);
+      --text-color: var(--text-light);
+      --card-bg: #ffffff;
+      --footer-bg: #10B981;
+      --nav-bg: rgba(240, 253, 244, 0.8);
+      --secondary-nav-bg: #ffffff;
+    }
+    .light .bg-gray-900 { background-color: var(--bg-light); }
+    .light .text-white { color: var(--text-light); }
+    .light .text-gray-300 { color: #4b5563; }
+    .light .text-gray-400 { color: #6b7280; }
+    .light .border-b-gray-700 { border-color: #d1d5db; }
+    .light .bg-gray-800 { background-color: #ffffff; }
+    .light .bg-gray-800\/50 { background-color: rgba(255, 255, 255, 0.5); }
+    .light .bg-gray-900\/80 { background-color: var(--nav-bg); }
+    .light .bg-gray-800\/90 {
+        background-color: var(--secondary-nav-bg);
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .light footer.bg-gray-900 { background-color: #10B981; }
+    .light footer .text-white { color: #ffffff; }
+    .light footer .text-gray-400 { color: #d1fae5; }
+    .light footer .hover\:text-white:hover { color: #ffffff; }
+    .light .hero-text-dark { color: white !important; }
+    .light .drop-shadow-lg { filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); }
+    .light .drop-shadow-md { filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06)); }
+    .dropdown:hover .dropdown-menu { display: block; }
+</style>
+</head>
+<body class="bg-gray-900 text-white" id="body">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+
+<!-- ✅ Navbar from destination.html -->
+<header class="w-full sticky top-0 z-50">
+  <!-- Top bar -->
+  <div class="bg-gray-900/80 backdrop-blur-lg transition-colors duration-300">
+    <div class="max-w-full mx-auto px-10">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-12">
+          <div class="flex items-center gap-3 text-green-400">
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 
+                12s4.48 10 10 10 10-4.48 
+                10-10S17.52 2 12 2zm-2 15l-4-4 
+                1.41-1.41L10 14.17l6.59-6.59L18 
+                9l-8 8z" fill-opacity="0.3"></path>
+              <path d="M14.24 12.81c.39-.73.3-1.68-.26-2.34l-1.6-1.89c-.43-.51-1.12-.7-1.78-.49l-2.61.82c-.4.12-.66.49-.66.91v3.29c0 .42.26.79.66.91l2.61.82c.66.21 1.35 0 1.78-.49l1.6-1.89c.56-.66.65-1.61.26-2.34zM10 
+                15.5v-3.41l1.71-.54 1.2 
+                1.42-1.2 1.42-1.71-.54z"></path>
+            </svg>
+            <h2 class="text-green-400 text-xl font-bold tracking-[-0.015em]">
+              Jharkhand
+            </h2>
+          </div>
+        </div>
+
+        <!-- Right side controls -->
+        <div class="flex items-center gap-4">
+          <!-- Language dropdown -->
+          <div class="relative dropdown">
+            <button
+              class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+              <span class="material-symbols-outlined text-green-400">language</span>
+              <span class="text-white text-sm font-medium">EN</span>
+              <span class="material-symbols-outlined text-green-400 text-sm">arrow_drop_down</span>
+            </button>
+            <div
+              class="dropdown-menu absolute hidden bg-gray-800 rounded-md shadow-lg mt-2 py-1 w-28 z-10 right-0">
+              <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                href="#">English</a>
+              <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                href="#">Hindi</a>
+            </div>
+          </div>
+
+          <!-- Dark/Light Mode Toggle -->
+          <button aria-label="Toggle dark mode"
+            class="relative inline-flex items-center h-8 rounded-full w-14 focus:outline-none"
+            id="theme-toggle">
+            <span class="absolute w-6 h-6 transform bg-white rounded-full transition-transform"
+              id="toggle-circle"></span>
+            <span class="material-symbols-outlined text-yellow-400 ml-1 z-10">light_mode</span>
+            <span class="material-symbols-outlined text-gray-800 mr-1 ml-auto z-10">dark_mode</span>
+          </button>
+
+          <!-- Profile button -->
+          <button
+            class="p-2 rounded-full bg-green-500 hover:bg-green-600 transition-colors duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+            <span class="material-symbols-outlined text-white"> person </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar links -->
+  <nav class="bg-gray-800/90 shadow-md backdrop-blur-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center h-14 overflow-x-auto">
+        <div class="flex items-center space-x-8 whitespace-nowrap">
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="home.html">Home</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="destination.html">Destinations</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="planyourtrip.html">Plan Your Trip</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="culture.html">Culture</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="bookings.html">Bookings</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="greentravel.html">Green Travel</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="heritagear.html">Heritage AR</a>
+          <a class="text-gray-300 text-sm font-medium leading-normal nav-link" href="aboutus.html">About Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="flex-1 bg-[var(--background)] pt-20">
+<section class="relative h-[60vh] w-full bg-cover bg-center" style="background-image: url('image-23c8808d91c24e609ca081d582b13ed8')">
+<div class="absolute inset-0 bg-black/50"></div>
+<div class="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">
+<h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Explore the Destinations of Jharkhand</h1>
+<p class="mt-4 max-w-2xl text-lg text-gray-200">From majestic waterfalls to ancient temples, discover the heart of incredible India.</p>
+</div>
+</section>
+<div class="py-16 sm:py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section>
+<div class="mb-12 text-center">
+<h2 class="text-3xl font-bold tracking-tight text-[var(--text)] sm:text-4xl">Featured Destinations</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">Our most popular and breathtaking locations, ready to be explored.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-theme-secondary dark:bg-gray-800">
+<img alt="Betla National Park" class="w-full h-72 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0OhhDlL7ze2kRVZtujtwQXt9puT7k9bcx9WsdsvOU9lhUoW4z5zH-yGX3QnyLn9xksT6TzLuWJa3TNjXdcoQSikCaqz_mbpjm_ULdy2GEsQOsdWnvlcToZRT9Q3E8YQKOzVzOnA2OdpSH2CDWWPTCjg6rS4ig-EyYfik2dFCBDatLug1WzkqP70WdB3immQPHUTRfgA3C_Swz7TWJMgQ9Ah-VOGCtimOaIOyW0a4xEa0Q6kG2EhLAwzQDJkqNAZuCzXdkwsxlKvA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+<div class="p-6 absolute bottom-0 left-0 right-0">
+<h3 class="text-2xl font-bold text-white">Betla National Park</h3>
+<p class="text-sm text-gray-200 mt-1">A tiger reserve with rich biodiversity.</p>
+</div>
+<button class="absolute top-4 right-4 flex items-center gap-2 text-white bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold hover:bg-theme-primary dark:hover:bg-green-500 transition-colors">
+<span class="material-symbols-outlined text-xl">vrpano</span>
+<span>360° Tour</span>
+</button>
+</div>
+<div class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-theme-secondary dark:bg-gray-800">
+<img alt="Dassam Falls" class="w-full h-72 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWWeIs7NCAHM5v6UBQfdunkQ-wFYEWtFM8fbCpr3SBxHLI6lBiEACVEIx9tC3QGmyAl0oM8Wk3r051iVbP0DQYFmAwZjsbm4TMvU3z_OfWCC_KeCdtymneFBGI3MoOIbLIdsvrO6g-HZAR6IQEeB9XQLHpJL5-DuBN3e_X0SwQ4VrRJRMG1w_TYLriiHECSxjQmGyBaxNedcXS2lCGoBuFJcXISq19eOqi5jXI4tyz787926FzjuSc4fywnFw4SskaKNaumC-jfS4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+<div class="p-6 absolute bottom-0 left-0 right-0">
+<h3 class="text-2xl font-bold text-white">Dassam Falls</h3>
+<p class="text-sm text-gray-200 mt-1">A spectacular waterfall near Ranchi.</p>
+</div>
+<button class="absolute top-4 right-4 flex items-center gap-2 text-white bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold hover:bg-theme-primary dark:hover:bg-green-500 transition-colors">
+<span class="material-symbols-outlined text-xl">vrpano</span>
+<span>360° Tour</span>
+</button>
+</div>
+<div class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-theme-secondary dark:bg-gray-800">
+<img alt="Patratu Valley" class="w-full h-72 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeVElzOP3o3MMbUcf2Izj-0KlFp4AlOqegKYZArhoAfBkzGOsxjIdFVRZyqDf11TQuuA0K4HI7jKd66_a4nV3usfKu-Ke0Hb6pwIoEYhlGVgT4lkLYnEWCmPUKsQggWdm8IZo7TdjhRtsJ1VLTcXhJc9XSuGNdlFgdN-Of7fkyCQs3UKy45IA6Hd5LgxxvjqaksZBA_7COGZk1PeRdRGqmas1nKG3nrumvLsxOJmfuMgxW-wpAHt_XPU5aoPsaO-Fahe69vnqhM3A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+<div class="p-6 absolute bottom-0 left-0 right-0">
+<h3 class="text-2xl font-bold text-white">Patratu Valley</h3>
+<p class="text-sm text-gray-200 mt-1">Scenic ghat roads and lush greenery.</p>
+</div>
+<button class="absolute top-4 right-4 flex items-center gap-2 text-white bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold hover:bg-theme-primary dark:hover:bg-green-500 transition-colors">
+<span class="material-symbols-outlined text-xl">vrpano</span>
+<span>360° Tour</span>
+</button>
+</div>
+</div>
+</section>
+<section class="mt-20 sm:mt-28">
+<div class="mb-12 text-center">
+<h2 class="text-3xl font-bold tracking-tight text-[var(--text)] sm:text-4xl">Hidden Gems</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">Discover lesser-known spots for a unique adventure.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="group relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:-translate-y-1 bg-theme-secondary dark:bg-gray-800">
+<img alt="Netarhat" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2M-c1Z9g3X8Y5k7l6Z0j7e3o6m5J5y8f4J2N3H2m1N6s7X7u7T3p2J7L8R5H2S1K3G7t6q5C2d3c7J5g3Z2V0"/>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-[var(--text)]">Netarhat</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Queen of Chotanagpur</p>
+</div>
+<button class="absolute top-2 right-2 flex items-center gap-1.5 text-white bg-black/50 backdrop-blur-sm rounded-full p-2 text-xs font-semibold hover:bg-theme-primary dark:hover:bg-green-500 transition-colors opacity-0 group-hover:opacity-100 duration-300">
+<span class="material-symbols-outlined text-lg">vrpano</span>
+</button>
+</div>
+<div class="group relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:-translate-y-1 bg-theme-secondary dark:bg-gray-800">
+<img alt="McCluskieganj" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjp350Ad_OnmymfVbo-jzwZykOpj_O9E-IBlh6vph5oGi3uOS7W6oWVUdrt-lvybFH_9NoQUByjGmkHXM97vG5PLCXPNqGsYpCsY1_R5R_gwjuMmJeFnLoRvNr6plco6yVv0IdEVA70j0VAQkQ97HPvEegPzbKNRkzBqt5zNwagY3yNVN7sp5q99MWxrwDa8us4FF0e4yt2PoSxECdIdqpMzTVXkPxREnG7BIjkavcgCDtJ7zWU0QGLl3FdTrNp-tbdHbbGZqEG94"/>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-[var(--text)]">McCluskieganj</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Mini London</p>
+</div>
+<button class="absolute top-2 right-2 flex items-center gap-1.5 text-white bg-black/50 backdrop-blur-sm rounded-full p-2 text-xs font-semibold hover:bg-theme-primary dark:hover:bg-green-500 transition-colors opacity-0 group-hover:opacity-100 duration-300">
+<span class="material-symbols-outlined text-lg">vrpano</span>
+</button>
+</div>
+<div class="group relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:-translate-y-1 bg-theme-secondary dark:bg-gray-800">
+<img alt="Tagore Hill" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3J9F1G4K2x5r8G9y7W4u5S6B7C3L1M0p9j8o7R4t1B3A9C8D6F5E4c9H6G3j2l1K0J9h8g7I6d5C4B3E2V1A0"/>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-[var(--text)]">Tagore Hill</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Poetic Views</p>
+</div>
+<button class="absolute top-2 right-2 flex items-center gap-1.5 text-white bg-black/50 backdrop-blur-sm rounded-full p-2 text-xs font-semibold hover:bg-theme-primary dark:hover:bg-green-500 transition-colors opacity-0 group-hover:opacity-100 duration-300">
+<span class="material-symbols-outlined text-lg">vrpano</span>
+</button>
+</div>
+<div class="group relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:-translate-y-1 bg-theme-secondary dark:bg-gray-800">
+<img alt="Lodh Falls" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2M-c1Z9g3X8Y5k7l6Z0j7e3o6m5J5y8f4J2N3H2m1N6s7X7u7T3p2J7L8R5H2S1K3G7t6q5C2d3c7J5g3Z2V0"/>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-[var(--text)]">Lodh Falls</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Highest Waterfall</p>
+</div>
+<button class="absolute top-2 right-2 flex items-center gap-1.5 text-white bg-black/50 backdrop-blur-sm rounded-full p-2 text-xs font-semibold hover:bg-theme-primary dark:hover:bg-green-500 transition-colors opacity-0 group-hover:opacity-100 duration-300">
+<span class="material-symbols-outlined text-lg">vrpano</span>
+</button>
+</div>
+</div>
+</section>
+<section class="mt-20 sm:mt-28">
+<div class="mb-12 text-center">
+<h2 class="text-3xl font-bold tracking-tight text-[var(--text)] sm:text-4xl">Eco Tourism Spots</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">Embrace nature responsibly at our specially preserved eco-tourism sites.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-theme-secondary dark:bg-gray-800 flex flex-col">
+<img alt="Saruwatar Hill" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDztTmLZL9tgKzN0Z5YkwubH5clIRjrMI-E6SVFLKUDqyYtZWHmxQZBhOsPtMWOoQyHPEpaoxGej_J1I0o5HY3lY312zSzZidjSrTFGeNtmQHHhPcuoyv-z9ObpOVNltzRyy02A5_5MKx8YFJDW8lIoY-mtYGh2LxhBIVNZtSXRoC0UBrpLmnCu-_N5JrK7BK_7Qt56NuiXhahrb1pFRR79G0NT46g3IPe2jtgbGcuOxExeMHNEzMeorLpZ7uXu8nlo8rS2cr4blQU"/>
+<div class="p-6 flex-grow flex flex-col">
+<h3 class="text-xl font-bold text-[var(--text)]">Saruwatar Hill</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-grow">Pristine nature trails and breathtaking views. Perfect for bird watching and trekking.</p>
+<button class="mt-4 w-full flex items-center justify-center gap-2 rounded-lg bg-green-100/50 dark:bg-green-900/30 py-2.5 text-sm font-semibold text-theme-primary dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors">
+<span class="material-symbols-outlined">vrpano</span>
+<span>Take a 360° Virtual Tour</span>
+</button>
+</div>
+</div>
+<div class="group overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-theme-secondary dark:bg-gray-800 flex flex-col">
+<img alt="Palamu Tiger Reserve" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD63N4lXDXQXM2nX_qsW8tS9-7wlmniY8I1xuL122hjYlM6PddZyrHcJrp5HTNkICwmacX6oyRrzSz6EU7ZDrEyVjjWk5VehwfhhcBZukq8vruUQbnotVzI-vAr4BN3xVZtqJFMLUifnxLOT6NPMACqswPmCO0RDVVYnKBlPG3Bgvd1E-tbQavA12Fp2mq27YrRLAdUvvWXr8L6aygKstyOXtk0MLzgWGOo3rlBMK9uoaZ_D5uiiJkSuWzK2-aqjcMmtHwIVtQVHFQ"/>
+<div class="p-6 flex-grow flex flex-col">
+<h3 class="text-xl font-bold text-[var(--text)]">Palamu Tiger Reserve</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-grow">Home to majestic tigers and elephants, offering responsible wildlife safaris.</p>
+<button class="mt-4 w-full flex items-center justify-center gap-2 rounded-lg bg-green-100/50 dark:bg-green-900/30 py-2.5 text-sm font-semibold text-theme-primary dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors">
+<span class="material-symbols-outlined">vrpano</span>
+<span>Take a 360° Virtual Tour</span>
+</button>
+</div>
+</div>
+<div class="group overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-theme-secondary dark:bg-gray-800 flex flex-col">
+<img alt="Dalma Wildlife Sanctuary" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpejRdqZex2mq2wqojzzI9v3Nao5iRRAkyWhdks-3rCiKRHWLAawNboszw7vzXNBODf-QNhNh-xDX8fu0ObLvnJNoIkZ910fH1MH5xieDmKFTlxzShX5S3vE-UyEiLpn881Prc5zVYyLbzXxPvmOV9c6_0T_toXa8Ttul2Plb5ifETvuZ_oJIn6oDlEJkR71at0xr--Y3A8h7qhzV4ANWYiL6L2r2335T3T39BOiDbjfpP9UYOZEWROthzhlz67mfQCAPpOZscm9c"/>
+<div class="p-6 flex-grow flex flex-col">
+<h3 class="text-xl font-bold text-[var(--text)]">Dalma Wildlife Sanctuary</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-grow">A lush green sanctuary known for its population of Indian elephants and vibrant flora.</p>
+<button class="mt-4 w-full flex items-center justify-center gap-2 rounded-lg bg-green-100/50 dark:bg-green-900/30 py-2.5 text-sm font-semibold text-theme-primary dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors">
+<span class="material-symbols-outlined">vrpano</span>
+<span>Take a 360° Virtual Tour</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<footer class="bg-theme-secondary dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+<div class="col-span-2 md:col-span-4 lg:col-span-1">
+<div class="flex items-center gap-3 text-theme-primary dark:text-green-400">
+<span class="material-symbols-outlined text-4xl">eco</span>
+<h2 class="text-xl font-bold">Jharkhand Tourism</h2>
+</div>
+<p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Explore the soul of Incredible India.
+                            </p>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">Quick Links</h3>
+<ul class="mt-4 space-y-4">
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">About Us</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Media</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Gallery</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">Explore</h3>
+<ul class="mt-4 space-y-4">
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Destinations</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Experiences</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Festivals</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Travel Guides</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">Legal</h3>
+<ul class="mt-4 space-y-4">
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Privacy Policy</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Terms of Use</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-400 hover:text-theme-primary dark:hover:text-green-400" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-4 lg:col-span-1">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">Newsletter</h3>
+<p class="mt-4 text-base text-gray-600 dark:text-gray-400">Subscribe to our newsletter for the latest updates.</p>
+<form class="mt-4 sm:flex sm:max-w-md">
+<label class="sr-only" for="email-address">Email address</label>
+<input autocomplete="email" class="appearance-none min-w-0 w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-green-500 focus:border-green-500" id="email-address" name="email-address" placeholder="Enter your email" required="" type="email"/>
+<div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+<button class="w-full bg-green-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:bg-green-600 dark:hover:bg-green-700" type="submit">
+                                        Sign Up
+                                    </button>
+</div>
+</form>
+</div>
+</div>
+<div class="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8 flex items-center justify-between">
+<p class="text-base text-gray-500 dark:text-gray-400">© 2024 Jharkhand Tourism. All rights reserved.</p>
+<div class="flex items-center space-x-4">
+<a class="text-gray-500 hover:text-gray-900 dark:hover:text-white" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a>
+<a class="text-gray-500 hover:text-gray-900 dark:hover:text-white" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
+<a class="text-gray-500 hover:text-gray-900 dark:hover:text-white" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.875 12.833a.75.75 0 01-.67.925l-2.034.29c-.38.054-.685.394-.685.783v1.895a.75.75 0 01-1.492.148l-1.396-3.25a.75.75 0 01.185-.853l2.87-2.31a.75.75 0 01.98.058l1.47 1.47a.75.75 0 010 1.06l-1.03 1.03a.75.75 0 000 1.06l1.731 1.73a.75.75 0 01.925-.67l.29-2.033a.75.75 0 01.783-.685l1.895-.272a.75.75 0 01.148 1.492l-3.25 1.396a.75.75 0 01-.853.185l-2.31-2.87a.75.75 0 01.058-.98l1.47-1.47a.75.75 0 011.06 0l1.03 1.03a.75.75 0 001.06 0l1.73-1.731a.75.75 0 01-.67.925l-2.033.29a.75.75 0 01-.685.783l-.272 1.895a.75.75 0 011.492.148l1.396-3.25a.75.75 0 01.185-.853l2.87-2.31a.75.75 0 01.98.058l1.47 1.47a.75.75 0 010 1.06l-1.03 1.03z" fill-rule="evenodd"></path></svg></a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script>
+  const toggleBtn = document.getElementById("theme-toggle");
+  const body = document.getElementById("body");
+  const toggleCircle = document.getElementById("toggle-circle");
+
+  // Load saved theme if any
+  if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light");
+    body.classList.remove("dark");
+    toggleCircle.style.transform = "translateX(24px)";
+  } else {
+    body.classList.add("dark");
+    body.classList.remove("light");
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+      body.classList.remove("dark");
+      body.classList.add("light");
+      localStorage.setItem("theme", "light");
+      toggleCircle.style.transform = "translateX(24px)";
+    } else {
+      body.classList.remove("light");
+      body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      toggleCircle.style.transform = "translateX(0)";
+    }
+  });
+</script>
+
+
+</body></html>
